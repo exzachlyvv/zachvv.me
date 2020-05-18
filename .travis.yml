@@ -3,12 +3,16 @@ language: php
 php:
   - 7.3
 
+services:
+  - mysql
+
 cache:
   directories:
     - node_modules
     - vendor
 
 before_script:
+  - mysql -e 'CREATE DATABASE laravel;'
   - cp .env.travis .env
   - composer self-update
   - composer install --no-interaction
