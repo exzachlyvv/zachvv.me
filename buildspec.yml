@@ -6,6 +6,7 @@ phases:
       php: 7.4
   pre_build: # commands to be run before build
     commands:
+      - composer install
       - php artisan key:generate --env=testing
       - echo Build completed on `date`
       - php artisan test
