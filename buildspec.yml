@@ -9,6 +9,8 @@ phases:
       - echo Pre build...
   build:
     commands:
+      - echo Initializing .env
+      - cp .env.example .env
       - echo Build started on `date`
       - echo installing composer..
       - composer install
