@@ -14,8 +14,6 @@ phases:
 #      - echo Initializing .env
 #      - cp .env.example .env
       - echo Build started on `date`
-      - echo installing composer..
-#      - composer install --optimize-autoloader --no-dev
       - echo building frontend assets
       - npm install
       - npm run production
