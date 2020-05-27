@@ -12,6 +12,7 @@ phases:
       - echo Build started on `date`
       - echo installing composer..
       - composer install
+      - php artisan key:generate
   post_build:
     commands:
       - echo Build completed on `date`
