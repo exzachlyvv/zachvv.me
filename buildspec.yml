@@ -9,13 +9,15 @@ phases:
       - echo Pre build...
   build:
     commands:
-#      - echo Initializing .env
-#      - cp .env.example .env
+      - echo Initializing .env
+      - cp .env.example .env
       - echo Build started on `date`
       - echo installing composer..
-      - composer install
-      - php artisan key:generate
+      - composer install --optimize-autoloader --no-dev
+      - php artisan key:generate --env=testing
       - php artisan config:cache
+      - php artisan route:cache
+      - php artisan view:cache
       - echo building frontend assets
       - npm install
       - npm run production
