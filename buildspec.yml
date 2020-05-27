@@ -13,6 +13,7 @@ phases:
       - echo installing composer..
       - composer install
       - php artisan key:generate
+      - php artisan config:cache
   post_build:
     commands:
       - echo Build completed on `date`
