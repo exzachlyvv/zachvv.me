@@ -20,7 +20,7 @@ phases:
     commands:
       - echo Build completed on `date`
       - php artisan test
-  artifacts:
-    files:
-      - '**/*'
-    name: BuildArtifact
+artifacts:
+  files:
+    - '**/*'
+  name: BuildArtifact
