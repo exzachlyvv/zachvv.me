@@ -24,6 +24,7 @@ phases:
       - echo Build completed on `date`
       - php artisan test
 artifacts:
+  type: zip
   files:
     - '**/*'
-  name: BuildArtifact
+  name: zachvv.me-$(date +%Y-%m-%d)
