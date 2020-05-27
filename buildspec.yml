@@ -16,6 +16,9 @@ phases:
       - composer install
       - php artisan key:generate
       - php artisan config:cache
+      - echo building frontend assets
+      - npm install
+      - npm run production
   post_build:
     commands:
       - echo Build completed on `date`
