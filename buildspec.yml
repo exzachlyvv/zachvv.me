@@ -6,25 +6,14 @@ phases:
       php: 7.4
   pre_build: # commands to be run before build
     commands:
-      - composer install
-      - echo Build completed on `date`
-      - php artisan test
+#      - echo pre build...
   build:
     commands:
 #      - echo Initializing .env
 #      - cp .env.example .env
       - echo Build started on `date`
-      - echo building frontend assets
-      - npm install
-      - npm run production
+      - composer install
   post_build:
     commands:
-#      - php artisan config:cache
-#      - php artisan route:cache
-#      - php artisan view:cache
-artifacts:
-  files:
-    - '**/*'
-  name: zachvv.me-$(date +%Y-%m-%d)
-
-
+      - echo Build completed on `date`
+      - php artisan test
