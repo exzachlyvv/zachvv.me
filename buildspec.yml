@@ -28,3 +28,5 @@ artifacts:
   files:
     - '**/*'
   name: zachvv.me-$(date +%Y-%m-%d)
+
+
