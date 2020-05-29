@@ -13,27 +13,14 @@
     <!-- Styles -->
     <link href="{{ mix('build/css/app.css') }}" rel="stylesheet">
 </head>
-<body class="bg-gray-100 h-screen antialiased leading-none">
+<body class="bg-white h-screen antialiased leading-none">
 <div class="flex flex-col">
-    @if(Route::has('login'))
-        <div class="absolute top-0 right-0 mt-4 mr-4">
-            @auth
-                <a href="{{ url('/home') }}" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase">{{ __('Home') }}</a>
-            @else
-                <a href="{{ route('login') }}" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase pr-6">{{ __('Login') }}</a>
-                @if (Route::has('register'))
-                    <a href="{{ route('register') }}" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase">{{ __('Register') }}</a>
-                @endif
-            @endauth
-        </div>
-    @endif
-
     <div class="min-h-screen flex items-center justify-center">
-        <div class="flex flex-col justify-around h-full">
-            <div>
-                <h1 class="text-gray-600 text-center font-light tracking-wider text-5xl mb-6">
-                    Coming soon :)
-                </h1>
+        <div class="flex flex-row h-full">
+            <img src="{{ asset('/images/zach_400x400.jpg') }}" class="rounded-full w-48 h-48">
+            <div class="flex flex-col justify-center ml-8">
+                <h1 class="mb-8 text-4xl font-hairline">Zach Vander Velden</h1>
+                <h1 class="text-base font-hairline">Coming soon :)</h1>
             </div>
         </div>
     </div>
