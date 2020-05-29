@@ -20,7 +20,7 @@
             <img src="{{ asset('/images/zach_400x400.jpg') }}" class="rounded-full w-48 h-48">
             <div class="flex flex-col justify-center ml-8">
                 <h1 class="mb-8 text-4xl font-hairline">Zach Vander Velden</h1>
-                <h1 class="text-base font-hairline">Coming soon :)</h1>
+                <h1 class="text-base font-hairline">Coming soon 🕺</h1>
             </div>
         </div>
     </div>
