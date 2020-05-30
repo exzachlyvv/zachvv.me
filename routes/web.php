@@ -15,7 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 \Illuminate\Support\Facades\Auth::routes();
 
-Route::get('/test', 'WelcomeController')->name('test');
-Route::get('/', 'WelcomeController')->name('welcome');
+Route::get('/', 'WelcomeController@home')->name('welcome');
+Route::livewire('/projects', 'projects')->name('projects');
+Route::get('/blog', 'WelcomeController@blog')->name('blog');
+Route::livewire('/contact', 'contact')->name('contact');
+//Route::get('/contact', 'WelcomeController@contact')->name('contact');
 Route::get('/home', 'HomeController@index')->name('home');
 

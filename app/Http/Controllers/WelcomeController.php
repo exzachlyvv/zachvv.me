@@ -8,13 +8,27 @@ use function view;
 class WelcomeController extends Controller
 {
     /**
-     * Handle the incoming request.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function __invoke(Request $request)
+    public function home()
     {
-        return view('welcome');
+        return view('landing.home');
+    }
+
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function blog()
+    {
+        return view('landing.blog');
+    }
+
+
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function shmegma()
+    {
+        return view('landing.shmegma');
     }
 }

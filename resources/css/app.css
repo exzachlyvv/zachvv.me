@@ -1,5 +1,51 @@
+.turbolinks-progress-bar {
+    height: 2px;
+    background-color: #4299e1;
+}
+
 @tailwind base;
 
 @tailwind components;
+
+.error {
+    @apply font-thin text-red-600 text-sm;
+}
+
+a:hover {
+    @apply text-blue-800;
+}
+a {
+    @apply font-thin text-blue-500;
+}
+
+p {
+    @apply mb-8 font-thin leading-8;
+}
+
+.form-input:focus {
+    @apply shadow-none bg-white border-gray-500;
+}
+.form-input {
+    @apply bg-gray-200 appearance-none border border-gray-200 rounded w-full py-2 px-4 text-gray-800 leading-tight;
+}
+
+
+.btn-primary {
+    @apply bg-gray-700;
+}
+.btn-primary:hover {
+    @apply bg-gray-800;
+}
+
+.btn:disabled {
+    @apply opacity-50 cursor-not-allowed;
+}
+.btn:focus {
+    @apply shadow-outline outline-none;
+}
+.btn {
+    @apply shadow text-white py-2 px-4 rounded
+}
+
 
 @tailwind utilities;

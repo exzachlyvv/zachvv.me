@@ -1,7 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
@@ -10,44 +11,42 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('build/js/app.js') }}" defer></script>
+    <script src="{{ asset('build/js/app.js') }}"></script>
 
     <!-- Styles -->
     <link href="{{ mix('build/css/app.css') }}" rel="stylesheet">
+
+    <livewire:styles>
 </head>
-<body class="bg-gray-100 h-screen antialiased leading-none">
-    <div id="app">
-        <nav class="bg-blue-900 shadow mb-8 py-6">
-            <div class="container mx-auto px-6 md:px-0">
-                <div class="flex items-center justify-center">
-                    <div class="mr-6">
-                        <a href="{{ url('/') }}" class="text-lg font-semibold text-gray-100 no-underline">
-                            {{ config('app.name', 'Laravel') }}
-                        </a>
-                    </div>
-                    <div class="flex-1 text-right">
-                        @guest
-                            <a class="no-underline hover:underline text-gray-300 text-sm p-3" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            @if (Route::has('register'))
-                                <a class="no-underline hover:underline text-gray-300 text-sm p-3" href="{{ route('register') }}">{{ __('Register') }}</a>
-                            @endif
-                        @else
-                            <span class="text-gray-300 text-sm pr-4">{{ Auth::user()->name }}</span>
+<body class="min-h-screen antialiased leading-none container mx-auto pt-8 md:pt-16 lg:pt-32 px-8 md:px-16 lg:px-48">
 
-                            <a href="{{ route('logout') }}"
-                               class="no-underline hover:underline text-gray-300 text-sm p-3"
-                               onclick="event.preventDefault();
-                                    document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
-                                {{ csrf_field() }}
-                            </form>
-                        @endguest
-                    </div>
-                </div>
+    <div class="flex flex-row h-full mb-16">
+        <a href="{{ route('welcome') }}" class="w-40 h-40 flex flex-col justify-center">
+            <img src="{{ asset('/images/zach_400x400.jpg') }}" class="rounded-full">
+        </a>
+
+        <div class="flex flex-col justify-center pl-8 md:pl-24 w-full">
+            <a href="{{ route('welcome') }}" class="font-hairline text-4xl mb-8 text-gray-700 hover:text-gray-900">
+                Zach Vander Velden
+            </a>
+
+            <div class="flex flex-row">
+                <a href="{{ route('projects') }}" class="mr-8">
+                    Projects
+                </a>
+                <a href="{{ route('blog') }}" class="mr-8">
+                    Blog
+                </a>
+                <a href="{{ route('contact') }}">
+                    Contact
+                </a>
             </div>
-        </nav>
-
-        @yield('content')
+        </div>
     </div>
+
+
+    @yield('content')
+
+    <livewire:scripts>
 </body>
 </html>
