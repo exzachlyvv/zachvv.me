@@ -35,15 +35,14 @@ class Contact extends Component
     {
         $this->validate($this->validation);
 
-        sleep(2);
-//        $mail = new ContactFormMail($this->body);
-//
-//        $mail
-//            ->to('zachvv11@gmail.com')
-//            ->subject($this->subject)
-//            ->replyTo($this->email, $this->name);
-//
-//        Mail::send($mail);
+        $mail = new ContactFormMail($this->body);
+
+        $mail
+            ->to('zachvv11@gmail.com')
+            ->subject($this->subject)
+            ->replyTo($this->email, $this->name);
+
+        Mail::send($mail);
 
         $this->email = null;
         $this->name = null;
