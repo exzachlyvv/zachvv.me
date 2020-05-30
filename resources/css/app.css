@@ -11,7 +11,7 @@
     @apply font-thin text-red-600 text-sm;
 }
 
-a:hover {
+a:hover, a.active {
     @apply text-blue-800;
 }
 a {

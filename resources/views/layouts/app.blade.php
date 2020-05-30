@@ -31,13 +31,13 @@
             </a>
 
             <div class="flex flex-row">
-                <a href="{{ route('projects') }}" class="mr-8">
+                <a href="{{ route('projects') }}" class="mr-8 {{ \Illuminate\Support\Facades\Request::is('projects') ? 'active' : '' }}">
                     Projects
                 </a>
-                <a href="{{ route('blog') }}" class="mr-8">
+                <a href="{{ route('blog') }}" class="mr-8 {{ \Illuminate\Support\Facades\Request::is('blog') ? 'active' : '' }}">
                     Blog
                 </a>
-                <a href="{{ route('contact') }}">
+                <a href="{{ route('contact') }}" class="{{ \Illuminate\Support\Facades\Request::is('contact') ? 'active' : '' }}">
                     Contact
                 </a>
             </div>
