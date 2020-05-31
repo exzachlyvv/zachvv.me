@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -31,13 +32,13 @@
             </a>
 
             <div class="flex flex-row">
-                <a href="{{ route('projects') }}" class="mr-8 {{ \Illuminate\Support\Facades\Request::is('projects') ? 'active' : '' }}">
+                <a href="{{ route('projects') }}" class="mr-8 {{ \Illuminate\Support\Facades\Request::routeIs('projects') ? 'active' : '' }}">
                     Projects
                 </a>
-                <a href="{{ route('blog') }}" class="mr-8 {{ \Illuminate\Support\Facades\Request::is('blog') ? 'active' : '' }}">
+                <a href="{{ route('posts.index') }}" class="mr-8 {{ \Illuminate\Support\Facades\Request::routeIs('posts.index') ? 'active' : '' }}">
                     Blog
                 </a>
-                <a href="{{ route('contact') }}" class="{{ \Illuminate\Support\Facades\Request::is('contact') ? 'active' : '' }}">
+                <a href="{{ route('contact') }}" class="{{ \Illuminate\Support\Facades\Request::routeIs('contact') ? 'active' : '' }}">
                     Contact
                 </a>
             </div>

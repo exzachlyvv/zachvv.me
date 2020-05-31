@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'WelcomeController@home')->name('welcome');
 Route::livewire('/projects', 'projects')->name('projects');
-Route::get('/blog', 'WelcomeController@blog')->name('blog');
+Route::resource('posts', 'PostController');
 Route::livewire('/contact', 'contact')->name('contact');
 //Route::get('/contact', 'WelcomeController@contact')->name('contact');
 Route::get('/home', 'HomeController@index')->name('home');

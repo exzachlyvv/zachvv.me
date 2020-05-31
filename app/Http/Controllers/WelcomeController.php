@@ -18,15 +18,6 @@ class WelcomeController extends Controller
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function blog()
-    {
-        return view('landing.blog');
-    }
-
-
-    /**
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
     public function shmegma()
     {
         return view('landing.shmegma');
