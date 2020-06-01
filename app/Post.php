@@ -21,6 +21,7 @@ class Post extends Model
         'description',
         'markdown',
         'slug',
+        'public',
         'user_id',
     ];
 

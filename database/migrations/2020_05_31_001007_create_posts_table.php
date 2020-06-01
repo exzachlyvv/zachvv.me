@@ -19,6 +19,7 @@ class CreatePostsTable extends Migration
             $table->string('description', 420);
             $table->text('markdown');
             $table->string('slug');
+            $table->boolean('public')->default(true);
             $table->foreignId('user_id')->constrained();
             $table->softDeletes();
             $table->timestamps();

@@ -11,7 +11,9 @@
     </div>
 
     @forelse ($posts as $post)
-        <x-post-preview :post="$post" />
+        <div class="mb-16">
+            <x-post-preview :post="$post" />
+        </div>
     @empty
         <p class="text-gray-700 italic">No posts yet...</p>
     @endforelse
