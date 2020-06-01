@@ -11,6 +11,6 @@
         Need help with your Laravel application? <a href="{{ route('contact') }}">Get in touch</a>
     </p>
     <p>
-        I'm no Laravel expert. Far from it. But <a href="{{ route('contact') }}">I've</a> <a href="">learned</a> a <a href="">few</a> <a href="">things</a>
+        I'm no Laravel expert. But <a href="">I've</a> <a href="">learned</a> a <a href="">few</a> <a href="">things</a>
     </p>
 @endsection

@@ -1,4 +1,6 @@
 <div>
-    <a href="https://lum.fm">lum.fm</a>
-    <p>More coming soon...</p>
+    <p>
+        <a href="https://lum.fm">lum.fm</a>
+    </p>
+    <p>Entire projects page is coming soon...</p>
 </div>
