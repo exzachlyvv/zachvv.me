@@ -59,6 +59,16 @@ class CrudPost extends Component
         return ! $this->isUpdating;
     }
 
+    public function getComputedPostProperty()
+    {
+        return new Post([
+            'id' => $this->postId,
+            'title' => $this->title,
+            'description' => $this->description,
+            'markdown' => $this->markdown,
+        ]);
+    }
+
     /**
      * The create or update form is submitted.
      *

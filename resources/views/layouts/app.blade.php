@@ -9,7 +9,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Zach Vander Velden</title>
 
     <!-- Scripts -->
     <script src="{{ asset('build/js/app.js') }}"></script>
@@ -27,9 +27,11 @@
         </a>
 
         <div class="flex flex-col justify-center pl-8 md:pl-24 w-full">
-            <a href="{{ route('welcome') }}" class="font-hairline text-4xl mb-8 text-gray-700 hover:text-gray-900">
-                Zach Vander Velden
-            </a>
+            <h1>
+                <a href="{{ route('welcome') }}" class="font-hairline text-gray-700 hover:text-gray-900">
+                    Zach Vander Velden
+                </a>
+            </h1>
 
             <div class="flex flex-row">
                 <a href="{{ route('projects') }}" class="mr-8 {{ \Illuminate\Support\Facades\Request::routeIs('projects') ? 'active' : '' }}">

@@ -7,6 +7,25 @@
 
 @tailwind components;
 
+h1 {
+    @apply mb-8 text-4xl;
+}
+h2 {
+    @apply mb-6 text-2xl;
+}
+h3 {
+    @apply mb-4 text-xl;
+}
+h4 {
+    @apply mb-2 text-lg;
+}
+h5 {
+    @apply mb-1 text-base;
+}
+h6 {
+    @apply mb-0 text-sm;
+}
+
 .error {
     @apply font-thin text-red-600 text-sm;
 }
@@ -59,5 +78,45 @@ p {
     @apply shadow py-2 px-4 rounded font-normal self-start;
 }
 
+.markdown {
+    pre,
+    h1 {
+        @apply my-8;
+    }
+
+    h2,
+    h3 {
+        @apply my-6;
+    }
+
+    p,
+    h4,
+    h5 {
+        @apply my-4;
+    }
+
+    code {
+        @apply bg-gray-100;
+    }
+
+    pre > code {
+        @apply p-8 font-thin text-sm;
+        display: block;
+        line-height: 1.25;
+        user-select: all;
+        overflow-x: auto;
+    }
+
+    p code,
+    li code {
+        padding: 3px 5px;
+        color: #f66d9b;
+    }
+
+    img,
+    table {
+        @apply max-w-full;
+    }
+}
 
 @tailwind utilities;

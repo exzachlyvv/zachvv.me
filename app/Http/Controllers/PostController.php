@@ -31,7 +31,9 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::
+            with('user')
+            ->get();
 
         return view('posts.index', [
             'posts' => $posts,
@@ -71,6 +73,7 @@ class PostController extends Controller
     public function show(Post $post)
     {
         // TODO: cache the markdown
+        $post->loadMissing('user');
 
         return view('posts.show', [
             'post' => $post,
