@@ -61,12 +61,16 @@ class CrudPost extends Component
 
     public function getComputedPostProperty()
     {
-        return new Post([
+        $post = new Post([
             'id' => $this->postId,
             'title' => $this->title,
             'description' => $this->description,
             'markdown' => $this->markdown,
         ]);
+
+        $post->setRelation('user', Auth::user());
+
+        return $post;
     }
 
     /**

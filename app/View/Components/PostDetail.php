@@ -35,6 +35,10 @@ class PostDetail extends Component
 
     public function parsedMarkdown()
     {
+        if (! $this->post->markdown) {
+            return "";
+        }
+
         return Markdown::parse($this->post->markdown);
     }
 }
