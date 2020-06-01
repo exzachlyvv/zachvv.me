@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://zachvv.me</loc>
+        <lastmod>2020-06-01T23:45:18+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://zachvv.me/</loc>
+        <lastmod>2020-06-01T23:45:17+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://zachvv.me/contact</loc>
+        <lastmod>2020-06-01T23:45:18+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://zachvv.me/posts</loc>
+        <lastmod>2020-06-01T23:45:18+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://zachvv.me/posts/a-little-more-about-me</loc>
+        <lastmod>2020-06-01T23:45:18+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://zachvv.me/posts/hello-world</loc>
+        <lastmod>2020-06-01T23:45:18+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://zachvv.me/projects</loc>
+        <lastmod>2020-06-01T23:45:18+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+</urlset>

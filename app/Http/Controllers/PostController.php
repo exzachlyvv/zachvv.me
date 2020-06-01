@@ -7,6 +7,7 @@ use App\Http\Requests\Posts\EditPostRequest;
 use App\Http\Requests\Posts\StorePostRequest;
 use App\Http\Requests\Posts\UpdatePostRequest;
 use App\Post;
+use Artesaos\SEOTools\SEOTools;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use function redirect;
@@ -76,6 +77,10 @@ class PostController extends Controller
     {
         // TODO: cache the markdown
         $post->loadMissing('user');
+
+        SEOTools::setTitle($post->title);
+        SEOTools::setDescription($post->description);
+        SEOTools::opengraph()->addProperty('type', 'articles');
 
         return view('posts.show', [
             'post' => $post,
