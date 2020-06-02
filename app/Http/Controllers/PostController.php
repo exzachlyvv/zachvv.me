@@ -78,9 +78,9 @@ class PostController extends Controller
         // TODO: cache the markdown
         $post->loadMissing('user');
 
-        SEOTools::setTitle($post->title);
-        SEOTools::setDescription($post->description);
-        SEOTools::opengraph()->addProperty('type', 'articles');
+//        SEOTools::setTitle($post->title);
+//        SEOTools::setDescription($post->description);
+//        SEOTools::opengraph()->addProperty('type', 'articles');
 
         return view('posts.show', [
             'post' => $post,

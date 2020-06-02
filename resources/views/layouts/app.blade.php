@@ -23,7 +23,7 @@
 
     <div class="flex flex-row h-full mb-16">
         <a href="{{ route('welcome') }}" class="w-40 h-40 flex flex-col justify-center">
-            <img src="{{ asset('/images/zach_400x400.jpg') }}" class="rounded-full">
+            <img src="{{ asset('/images/zach_400x400.jpg') }}" class="rounded-full" alt="Zach Vander Velden">
         </a>
 
         <div class="flex flex-col justify-center pl-8 md:pl-24 w-full">
