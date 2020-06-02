@@ -4,12 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\Posts\DeletePostRequest;
 use App\Http\Requests\Posts\EditPostRequest;
-use App\Http\Requests\Posts\StorePostRequest;
-use App\Http\Requests\Posts\UpdatePostRequest;
 use App\Post;
-use Artesaos\SEOTools\SEOTools;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
+use Artesaos\SEOTools\Facades\SEOTools;
 use function redirect;
 use function view;
 
@@ -21,7 +17,7 @@ class PostController extends Controller
             'except' => [
                 'index',
                 'show',
-            ]
+            ],
         ]);
     }
 
@@ -34,9 +30,10 @@ class PostController extends Controller
     {
         $posts = Post::
             with('user')
-            ->wherePublic(true)
-            ->latest()
-            ->get();
+                ->wherePublic(true)
+                ->latest()
+                ->get()
+            ;
 
         return view('posts.index', [
             'posts' => $posts,
@@ -56,7 +53,8 @@ class PostController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
+     *
      * @return \Illuminate\Http\Response
      */
     // using the Livewire component for this
@@ -70,7 +68,6 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  Post  $post
      * @return \Illuminate\Http\Response
      */
     public function show(Post $post)
@@ -78,9 +75,9 @@ class PostController extends Controller
         // TODO: cache the markdown
         $post->loadMissing('user');
 
-//        SEOTools::setTitle($post->title);
-//        SEOTools::setDescription($post->description);
-//        SEOTools::opengraph()->addProperty('type', 'articles');
+        SEOTools::setTitle($post->title);
+        SEOTools::setDescription($post->description);
+        SEOTools::opengraph()->addProperty('type', 'articles');
 
         return view('posts.show', [
             'post' => $post,
@@ -102,8 +99,9 @@ class PostController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  Post  $post
+     * @param \Illuminate\Http\Request $request
+     * @param Post                     $post
+     *
      * @return \Illuminate\Http\Response
      */
     // Using the livewire component for this.
@@ -119,7 +117,8 @@ class PostController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  Post  $post
+     * @param Post $post
+     *
      * @return \Illuminate\Http\Response
      */
     public function destroy(DeletePostRequest $request)

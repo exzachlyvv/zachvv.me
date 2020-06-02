@@ -11,9 +11,9 @@ return [
         'defaults'       => [
             'title'        => "Zach Vander Velden", // set false to total remove
             'titleBefore'  => false, // Put defaults.title before page title, like 'It's Over 9000! - Dashboard'
-            'description'  => 'For those who helped create the Genki Dama', // set false to total remove
+            'description'  => 'Full stack developer. Laravel, SQL, PHP, iOS, AWS. Lead developer behind lum.fm. Always looking for the next fun project.', // set false to total remove
             'separator'    => ' - ',
-            'keywords'     => [],
+            'keywords'     => ['Laravel', 'PHP', 'Software', 'developer', 'engineer', 'Amazon Web Services', 'CTO', 'MySQL'],
             'canonical'    => null, // Set null for using Url::current(), set false to total remove
             'robots'       => false, // Set to 'all', 'none' or any combination of index/noindex and follow/nofollow
         ],
@@ -36,11 +36,11 @@ return [
          * The default configurations to be used by the opengraph generator.
          */
         'defaults' => [
-            'title'       => 'Zach Vander Velden', // set false to total remove
-            'description' => 'For those who helped create the Genki Dama', // set false to total remove
-            'url'         => false, // Set null for using Url::current(), set false to total remove
+            'title'       => "Zach Vander Velden", // set false to total remove
+            'description' => 'Full stack developer. Laravel, SQL, PHP, iOS, AWS. Lead developer behind lum.fm. Always looking for the next fun project.', // set false to total remove
+            'url'         => null, // Set null for using Url::current(), set false to total remove
             'type'        => false,
-            'site_name'   => false,
+            'site_name'   => 'zachvv.me',
             'images'      => [],
         ],
     ],
@@ -58,9 +58,9 @@ return [
          * The default configurations to be used by the json-ld generator.
          */
         'defaults' => [
-            'title'       => 'Zach Vander Velden', // set false to total remove
-            'description' => 'For those who helped create the Genki Dama', // set false to total remove
-            'url'         => false, // Set null for using Url::current(), set false to total remove
+            'title'       => "Zach Vander Velden", // set false to total remove
+            'description' => 'Full stack developer. Laravel, SQL, PHP, iOS, AWS. Lead developer behind lum.fm. Always looking for the next fun project.', // set false to total remove
+            'url'         => null, // Set null for using Url::current(), set false to total remove
             'type'        => 'WebPage',
             'images'      => [],
         ],
