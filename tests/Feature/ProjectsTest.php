@@ -16,6 +16,6 @@ class ProjectsTest extends TestCase
     {
         $response = $this->get('/projects');
 
-        $response->assertStatus(201);
+        $response->assertStatus(200);
     }
 }
