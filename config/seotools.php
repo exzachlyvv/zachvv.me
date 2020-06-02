@@ -39,9 +39,9 @@ return [
             'title'       => "Zach Vander Velden", // set false to total remove
             'description' => 'Full stack developer. Laravel, SQL, PHP, iOS, AWS. Lead developer behind lum.fm. Always looking for the next fun project.', // set false to total remove
             'url'         => null, // Set null for using Url::current(), set false to total remove
-            'type'        => false,
+            'type'        => 'website',
             'site_name'   => 'zachvv.me',
-            'images'      => [],
+            'images'      => ['/images/zach_400x400.jpg'],
         ],
     ],
     'twitter' => [
