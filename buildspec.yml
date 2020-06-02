@@ -16,4 +16,4 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-      - php artisan test
+      - ./vendor/bin/phpunit
