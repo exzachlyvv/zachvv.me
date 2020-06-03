@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="flex flex-row justify-between">
-        <h1 class="text-4xl mb-8 mx-2">Posts</h1>
+    <div class="flex flex-row justify-between content-center mb-8">
+        <h1 class="text-4xl">Posts</h1>
 
         @auth
             <a class="btn btn-primary" href="{{ route('posts.create') }}">Create</a>

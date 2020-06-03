@@ -6,6 +6,8 @@ use App\Http\Requests\Posts\DeletePostRequest;
 use App\Http\Requests\Posts\EditPostRequest;
 use App\Post;
 use Artesaos\SEOTools\Facades\SEOTools;
+use Auth;
+use Illuminate\Database\Eloquent\Builder;
 use function redirect;
 use function view;
 
@@ -31,6 +33,9 @@ class PostController extends Controller
         $posts = Post::
             with('user')
                 ->wherePublic(true)
+                ->when(Auth::id(), function (Builder $query, $userId) {
+                    $query->orWhere('posts.user_id', $userId);
+                })
                 ->latest()
                 ->get()
             ;

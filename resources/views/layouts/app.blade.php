@@ -21,7 +21,7 @@
 
     <livewire:styles>
 </head>
-<body class="min-h-screen antialiased leading-none container mx-auto pt-8 md:pt-16 lg:pt-32 px-8 md:px-16 lg:px-48">
+<body class="min-h-screen antialiased leading-none container mx-auto pt-8 md:pt-16 lg:pt-32 px-8 md:px-16 lg:px-48 mb-16">
 
     <div class="flex flex-row h-full mb-16">
         <a href="{{ route('welcome') }}" class="w-40 h-40 flex flex-col justify-center">

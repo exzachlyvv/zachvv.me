@@ -26,6 +26,15 @@ class Post extends Model
     ];
 
     /**
+     * default values.
+     *
+     * @var array
+     */
+    protected $attributes = [
+        'public' => true,
+    ];
+
+    /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function user()

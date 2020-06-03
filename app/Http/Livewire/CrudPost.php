@@ -14,6 +14,7 @@ class CrudPost extends Component
     public $title;
     public $description;
     public $markdown;
+    public $public;
 
     /**
      * Can't store a eloquent model in a public property without significant side effects. That is why we are deconstrucing.
@@ -29,6 +30,7 @@ class CrudPost extends Component
         $this->title = $post->title;
         $this->description = $post->description;
         $this->markdown = $post->markdown;
+        $this->public = $post->public;
     }
 
     /**
@@ -66,6 +68,7 @@ class CrudPost extends Component
             'title' => $this->title,
             'description' => $this->description,
             'markdown' => $this->markdown,
+            'public' => $this->public,
         ]);
 
         $post->setRelation('user', Auth::user());
@@ -80,9 +83,10 @@ class CrudPost extends Component
      */
     public function submit()
     {
-        $this->validate([
+        $validatedAttributes = $this->validate([
             'title' => 'required|min:5',
             'description' => 'required',
+            'public' => 'required|boolean',
             'markdown' => 'required',
         ]);
 
@@ -92,12 +96,9 @@ class CrudPost extends Component
             throw new AuthorizationException();
         }
 
-        $post->fill([
-            'title' => $this->title,
-            'description' => $this->description,
-            'markdown' => $this->markdown,
-            'user_id' => Auth::id(),
-        ]);
+        $post->fill($validatedAttributes + [
+                'user_id' => Auth::id(),
+            ]);
 
         $post->save();
 

@@ -1,4 +1,4 @@
-<div class="flex justify-center mb-16">
+<div class="flex justify-center">
     <form class="w-1/2 max-w-xl">
         <div class="mb-6">
             <label class="block text-gray-500 mb-1 pr-4" for="inline-title">
@@ -20,6 +20,13 @@
             </label>
             <textarea wire:model="markdown" class="form-input outline-none" id="inline-markdown" placeholder="🕺" rows="8"></textarea>
             @error('markdown') <span class="error">{{ $message }}</span> @enderror
+        </div>
+        <div class="mb-6 flex">
+            <label class="block text-gray-500 mb-1 pr-4" for="inline-public">
+                <input wire:model="public" class="mr-2 leading-tight" type="checkbox" id="inline-public">
+                Public?
+            </label>
+            @error('public') <span class="error">{{ $message }}</span> @enderror
         </div>
         <div class="flex justify-end">
             <button wire:click="submit" wire:loading.attr="disabled" class="btn btn-primary" type="button">
