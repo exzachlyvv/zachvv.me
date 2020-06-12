@@ -2,11 +2,11 @@
     <h1>Ongoing Projects</h1>
 
     <x-project-preview
-        url="https://github.com/exzachlyvv/laravel-websockets-aws-apigateway"
-        title="Laravel Websockets Driver for AWS API Gateway"
-        subtitle="Websockets for Laravel, actually done right."
+        url="https://laravel-websockets.zachvv.me/"
+        title="Laravel Websockets you can actually afford"
+        subtitle="No configuration. No headaches. Affordable pricing."
         date="May 2020 to Present"
-        description="No more headaches with servers or emptying your pockets on Pusher. You same old Laravel application communicating over websocket using AWS's new API Gateway for websockets. Works best if your Laravel application is hosted on AWS."
+        description="No more headaches with servers or emptying your pockets on Pusher. A websocket service made for Laravel applications."
     />
 
     <x-project-preview
