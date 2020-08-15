@@ -20,3 +20,6 @@ _ide_helper_models.php
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
+.vapor/
+.env.production
+.env.staging

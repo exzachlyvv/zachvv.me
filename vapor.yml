@@ -1,0 +1,15 @@
+id: 12598
+name: zachvvme
+environments:
+    production:
+        domain: zachvv.me
+        network: larasocket
+        database: larasocket-prod
+        capacity: 1
+        memory: 256
+        cli-memory: 256
+        runtime: php-7.4
+        build:
+            - 'COMPOSER_MIRROR_PATH_REPOS=1 composer install --no-dev'
+            - 'php artisan event:cache'
+            - 'npm ci && npm run prod && rm -rf node_modules'
