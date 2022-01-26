@@ -19,7 +19,7 @@
     <!-- Styles -->
     <link href="{{ mix('build/css/app.css') }}" rel="stylesheet">
 
-    <livewire:styles>
+{{--    <livewire:styles>--}}
 </head>
 <body class="min-h-screen antialiased leading-none container mx-auto pt-8 md:pt-16 lg:pt-32 px-8 md:px-16 lg:px-48 mb-16">
 
@@ -36,15 +36,15 @@
             </h1>
 
             <div class="flex flex-row">
-                <a href="{{ route('projects') }}" class="mr-8 {{ \Illuminate\Support\Facades\Request::routeIs('projects') ? 'active' : '' }}">
-                    Projects
-                </a>
-                <a href="{{ route('posts.index') }}" class="mr-8 {{ \Illuminate\Support\Facades\Request::routeIs('posts.index') ? 'active' : '' }}">
-                    Blog
-                </a>
-                <a href="{{ route('contact') }}" class="{{ \Illuminate\Support\Facades\Request::routeIs('contact') ? 'active' : '' }}">
-                    Contact
-                </a>
+{{--                <a href="{{ route('projects') }}" class="mr-8 {{ \Illuminate\Support\Facades\Request::routeIs('projects') ? 'active' : '' }}">--}}
+{{--                    Projects--}}
+{{--                </a>--}}
+{{--                <a href="{{ route('posts.index') }}" class="mr-8 {{ \Illuminate\Support\Facades\Request::routeIs('posts.index') ? 'active' : '' }}">--}}
+{{--                    Blog--}}
+{{--                </a>--}}
+{{--                <a href="{{ route('contact') }}" class="{{ \Illuminate\Support\Facades\Request::routeIs('contact') ? 'active' : '' }}">--}}
+{{--                    Contact--}}
+{{--                </a>--}}
             </div>
         </div>
     </div>

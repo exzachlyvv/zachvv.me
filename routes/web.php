@@ -16,9 +16,9 @@ use Illuminate\Support\Facades\Route;
 \Illuminate\Support\Facades\Auth::routes();
 
 Route::get('/', 'WelcomeController@home')->name('welcome');
-Route::livewire('/projects', 'projects')->name('projects');
-Route::resource('posts', 'PostController');
-Route::livewire('/contact', 'contact')->name('contact');
+//Route::livewire('/projects', 'projects')->name('projects');
+//Route::resource('posts', 'PostController');
+//Route::livewire('/contact', 'contact')->name('contact');
 //Route::get('/contact', 'WelcomeController@contact')->name('contact');
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
 
